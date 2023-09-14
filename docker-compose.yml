@@ -1,0 +1,9 @@
+version: '3'
+services:
+  web:
+    build: node-image
+    ports: 
+      - "5000:8080"
+    restart: on-failure
+  db:
+   image: 'redis:alpine3.18'
